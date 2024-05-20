@@ -1,6 +1,6 @@
 {
     "name": "adjustments-fix",
-    "description": "A plugin for use as a template.",
+    "description": "A plugin that fixes Adjustments.plist",
     "authors": [
         {
             "name": "Froyo4u",

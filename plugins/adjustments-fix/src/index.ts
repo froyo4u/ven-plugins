@@ -1,9 +1,5 @@
 import { findByProps } from "@vendetta/metro";
 import { after, before } from "@vendetta/patcher";
-import { storage } from "@vendetta/plugin";
-
-// Default settings
-storage.nameLength ??= 8;
 
 const uploadModule = findByProps("uploadLocalFiles");
 
