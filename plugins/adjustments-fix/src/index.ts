@@ -1,5 +1,5 @@
 import { findByProps } from "@vendetta/metro";
-import { before } from "@vendetta/patcher";
+import { after, before } from "@vendetta/patcher";
 import { storage } from "@vendetta/plugin";
 import fileString from "./lib/fileString";
 
@@ -8,7 +8,7 @@ storage.nameLength ??= 8;
 
 const uploadModule = findByProps("uploadLocalFiles");
 
-export const onUnload = before("uploadLocalFiles", uploadModule, (args) => { 
+export const onUnload = after("uploadLocalFiles", uploadModule, (args) => { 
     const { items } = args[0];
     if (!items) return;
 
@@ -21,7 +21,7 @@ export const onUnload = before("uploadLocalFiles", uploadModule, (args) => {
 
         // why are there two. why???
         // and yes, i checked, setting both is required...
-        if (name + ext == "Adjustments.plist") {
+        if (ext == "png" || ext == "jpg" || ext == "jpeg") {
             i.filename = "image.png";
             if (i.item) i.item.filename = "image.png";
         }
