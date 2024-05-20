@@ -7,7 +7,7 @@ storage.nameLength ??= 8;
 
 const uploadModule = findByProps("uploadLocalFiles");
 
-export const onUnload = after("uploadLocalFiles", uploadModule, (args) => { 
+export const onUnload = before("uploadLocalFiles", uploadModule, (args) => { 
     const { items } = args[0];
     if (!items) return;
 
