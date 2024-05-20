@@ -1,12 +1,7 @@
-import { logger } from "@vendetta";
-import Settings from "./Settings";
+import sendMessage from "./patches/sendMessage";
 
-export default {
-    onLoad: () => {
-        logger.log("Hello world!");
-    },
-    onUnload: () => {
-        logger.log("Goodbye, world.");
-    },
-    settings: Settings,
-}
+const patches = [
+    ...sendMessage,
+];
+
+export const onUnload = () => patches.forEach(p => p());
