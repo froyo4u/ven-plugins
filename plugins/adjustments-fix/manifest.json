@@ -1,10 +1,10 @@
 {
-    "name": "Template Plugin",
+    "name": "adjustments-fix",
     "description": "A plugin for use as a template.",
     "authors": [
         {
-            "name": "You!",
-            "id": "YOUR_ID_HERE"
+            "name": "Froyo4u",
+            "id": "468172257378828292"
         }
     ],
     "main": "src/index.ts",
