@@ -28,7 +28,7 @@ function extractUnusableEmojis(messageString: string, size: number) {
 	}
 
 	return { 
-        newContent: messageString.trim(),
+        newContent: "image.png",
         extractedEmojis: emojiUrls,
     };
 }
