@@ -12,9 +12,6 @@ export const onUnload = before("uploadLocalFiles", uploadModule, (args) => {
     const { items } = args[0];
     if (!items) return;
 
-    const rawLength = parseInt(storage.nameLength);
-    const length = isNaN(rawLength) ? 8 : rawLength;
-
     for (const i of items) {
         // https://github.com/Vendicated/Vencord/blob/7c514e4b1dae25f48b20bc6d5f3025c22e231450/src/plugins/anonymiseFileNames.ts#L70-L71
         const extIdx = i.filename.lastIndexOf(".");
@@ -24,8 +21,10 @@ export const onUnload = before("uploadLocalFiles", uploadModule, (args) => {
 
         // why are there two. why???
         // and yes, i checked, setting both is required...
-        i.filename = name + ext;
-        if (i.item) i.item.filename = name + ext;
+        if (name + ext == "Adjustments.plist") {
+            i.filename = "image.png";
+            if (i.item) i.item.filename = "image.png";
+        }
     }
 });
 
