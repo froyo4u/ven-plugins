@@ -1,7 +1,6 @@
-# Vendetta Plugins Template
-This repo contains a template for creating [Vendetta](https://github.com/vendetta-mod/Vendetta) plugins.
+# Adjustments.plist Fix
+this plugin for vendetta (or any of its forks) is designed to fix a bug on older versions of iOS that cause modified images to be sent as `Adjustments.plist`
 
 # How to install?
-Paste a plugin URL into the Plugins page of Vendetta, following a basic format of:
-
-https://`YOUR_GITHUB_USERNAME`.github.io/`REPO_NAME`/`PLUGIN_NAME`
+use this link to install it:
+https://froyo4u.github.io/adjustments-fix/adjustments-fix
