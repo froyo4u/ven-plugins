@@ -1,9 +1,9 @@
 import { findByProps } from "@vendetta/metro";
-import { after, before, instead } from "@vendetta/patcher";
+import { after, before } from "@vendetta/patcher";
 
 const uploadModule = findByProps("uploadLocalFiles");
 
-export const onUnload = instead("uploadLocalFiles", uploadModule, (args) => { 
+export const onUnload = before("uploadLocalFiles", uploadModule, (args) => { 
     const { items } = args[0];
     if (!items) return;
 
