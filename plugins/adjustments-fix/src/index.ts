@@ -1,5 +1,5 @@
 import { findByProps } from "@vendetta/metro";
-import { after, before } from "@vendetta/patcher";
+import { before } from "@vendetta/patcher";
 
 const uploadModule = findByProps("uploadLocalFiles");
 
