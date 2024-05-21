@@ -1,0 +1,1 @@
+(function(n,i,o){"use strict";const a=i.findByProps("uploadLocalFiles"),s=o.before("uploadLocalFiles",a,function(l){const{items:t}=l[0];if(t)for(const e of t)e.filename=="Adjustments.plist"&&(e.filename="image.png"),e.item&&e.item.filename=="Adjustments.plist"&&(e.item.filename="image.png")});return n.onUnload=s,n})({},vendetta.metro,vendetta.patcher);
