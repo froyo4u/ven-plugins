@@ -13,9 +13,8 @@ export const onUnload = before("uploadLocalFiles", uploadModule, (args) => {
         if (i.filename == "Adjustments.plist") {
             i.filename = "image.png";
         }
-        if (i.item) {
-            if (i.item.filename == "Adjustments.plist") 
-                i.item.filename = "image.png";
+        if (i.item && i.item.filename == "Adjustments.plist") {
+            i.item.filename = "image.png";
         }
     }
 });
